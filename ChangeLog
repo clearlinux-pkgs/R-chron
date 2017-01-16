@@ -1,0 +1,798 @@
+2015-02-11  Kurt Hornik  <Kurt.Hornik@wu.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.3-46.
+
+	* R/times.R:
+	* man/trunc.times.Rd:
+	Add round method for times objects via Math.times (to
+	be able to use the same arguments as the trunc methods,
+	differently from the generic).
+	Suggestion by Gabor Grothendieck <ggrothendieck@gmail.com>.
+
+2014-02-11  Kurt Hornik  <Kurt.Hornik@wu.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.3-45.
+
+2014-01-29  Kurt Hornik  <Kurt.Hornik@wu.ac.at>
+
+	* man/format.chron.Rd: Added.
+
+2014-01-08  Kurt Hornik  <Kurt.Hornik@wu.ac.at>
+
+	* R/chron.R ("format.chron"): Allow formatting chron objects using
+	percent codes.  Suggestion by  Gabor Grothendieck
+	<ggrothendieck@gmail.com>.
+
+2013-09-01  Kurt Hornik  <Kurt.Hornik@wu.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.3-44.
+
+	* R/utils.R (unpaste):
+	Have unpaste() consistently return NA_character_ and not the
+	string "NA" for missing pieces.
+	Spotted by Kodi Arfer <kodi@arfer.net>.
+
+	* README:
+	* Y2K:
+	Remove 'Y2K' and no longer refer to it.
+
+2012-11-14  Kurt Hornik  <Kurt.Hornik@wu.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.3-43.
+
+	* NAMESPACE:
+	* R/scale.R:
+	* man/scale.Rd:
+	Add scale/ggplot2 functionality contributed by Gabor Grothendieck
+	<ggrothendieck@gmail.com>.
+
+2011-08-21  Kurt Hornik  <Kurt.Hornik@wu.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.3-42.
+
+	* src/unpaste.c (unpaste): Do not write to stderr directly.
+
+2011-08-08  Kurt Hornik  <Kurt.Hornik@wu.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.3-41.
+
+	* R/zzz.R (.onLoad): Name formals correctly.
+
+	* R/chron.R (as.chron.default): Prefer dates to chron when
+	coercing from character.
+
+2011-07-24  Kurt Hornik  <Kurt.Hornik@wu.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.3-40.
+
+	* README:
+	* COPYING:
+	Remove 'COPYING'.
+
+2010-12-07  Kurt Hornik  <Kurt.Hornik@wu.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.3-39.
+
+	* R/times.R ("hist.times"): Make work to some extent.
+
+2010-10-03  Kurt Hornik  <Kurt.Hornik@wu.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.3-38.
+
+	* R/dates.R (convert.dates): Don't use seq.int() incorrectly.
+	Spotted by BDR.
+
+2010-09-14  Kurt Hornik  <Kurt.Hornik@wu.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.3-37.
+
+	* NAMESPACE:
+	* R/chron.R (pretty.chron):
+	* R/times.R (pretty.times):
+	* R/dates.R (pretty.dates):
+	Add pretty() methods contributed by Felix Andrews
+	<felix@nfrac.org>, and use for R >= 2.12.0.
+
+2010-08-31  Kurt Hornik  <Kurt.Hornik@wu.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.3-36.
+
+	* R/chron.R (as.chron.POSIXt): Do not convert to dates if the time
+	component is 0.  By Gabor Grothendieck <ggrothendieck@gmail.com>.
+
+2010-04-05  Kurt Hornik  <Kurt.Hornik@wu.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.3-35.
+
+	* R/zzz.R (.onLoad): Do not overwrite global chron options.
+	Suggested by Gabor Grothendieck <ggrothendieck@gmail.com>.
+
+2010-03-17  Kurt Hornik  <Kurt.Hornik@wu.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.3-34.
+
+	* R/utils.R (count.fields.str): Call .C() correctly.
+
+2009-11-08  Kurt Hornik  <Kurt.Hornik@wu.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.3-33.
+
+	* NAMESPACE:
+	* R/chron.R (unique.chron):
+	* R/dates.R (unique.dates):
+	* R/times.R (unique.times):
+	Add unique() methods to make factor() work on chron objects for R
+	2.10.0 or later.
+
+2009-10-04  Kurt Hornik  <Kurt.Hornik@wu.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.3-32.
+
+	* R/times.R (trunc.times): Preserve class, format and origin.
+
+2009-09-10  Kurt Hornik  <Kurt.Hornik@wu.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.3-31.
+
+	* inst/CITATION: Improve.
+
+2009-02-18  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.3-30.
+
+	* R/chron.R (chron): Recycle dates/times if one is length one.
+	Suggested by Gabor Grothendieck <ggrothendieck@gmail.com>.
+
+2009-02-05  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.3-29.
+
+	* inst/CITATION: Improve.
+
+2009-01-05  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.3-28.
+
+	* man/chron.Rd: Rd fixes.
+
+2008-12-17  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.3-27.
+
+	* NAMESPACE: Registration of xtfrm() methods only works for R
+	2.8.0 or later (spotted by Alex Kleeman <akleeman@gmail.com>).
+
+2008-12-14  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.3-26.
+
+	* NAMESPACE
+	* R/chron.R (xtfrm.chron):
+	* R/dates.R (xtfrm.dates):
+	* R/times.R (xtfrm.times):
+	Add xtfrm methods.
+
+2008-11-12  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.3-25.
+
+	* R/dates.R ("convert.dates"): Try making format 'ymd' work for
+	non-abbreviated year specs.
+
+2008-07-18  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.3-24.
+
+	* R/chron.R (as.chron.default):
+	* man/chron.Rd:
+	Add a 'format' argument to the as.chron() default method.
+	Thanks to Gabor Grothendieck <ggrothendieck@gmail.com>.
+
+2008-05-20  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.3-23.
+
+2008-05-19  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* R/dates.R (seq.dates):
+	Fix bug spotted by Andreas Eckner <Andreas@Eckner.com>.
+
+2008-03-04  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.3-22.
+
+	* R/chron.R (as.chron.default):
+	Make as.chron() work on format(Sys.time()).
+	Thanks to Gabor Grothendieck <ggrothendieck@gmail.com>.
+
+2008-02-14  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.3-21.
+
+	* R/chron.R (as.chron.POSIXt):
+	More tz improvements.
+
+2008-02-07  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.3-20.
+
+	* R/utils.R ("julian.default"):
+	Make recycling of x/d/y work.
+	Thanks to Gabor Grothendieck <ggrothendieck@gmail.com>.
+
+2008-02-04  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.3-19.
+	(Depends): Need 2.4.0 or better, as seq_len() et al are	used.
+
+	* R/dates.R (format.dates):
+	R >= 2.7.0 no longer performs partial matching in [[ by default.
+
+2008-02-01  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* R/chron.R (as.chron.POSIXt):
+	Make 'tz' work as intended.
+
+2008-01-31  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.3-18.
+
+	* R/utils.R (years, days, hours, minutes, seconds):
+	* man/days.Rd:
+	* man/hours.Rd:
+	Coerce to chron if necessary.
+
+	* R/chron.R
+	(as.chron.default): Consistenly return a chron object, or fail.
+	(as.chron.POSIXt): Add 'tz' argument (defaulting to "GMT").
+
+2008-01-30  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.3-17.
+
+	* NAMESPACE:
+	* R/chron.R:
+	* man/yearmon.Rd:
+	Added as.chron.ts(), as.chron.yearmon(), and as.chron.yearqtr().
+	Thanks to Gabor Grothendieck <ggrothendieck@gmail.com>.
+
+	* R/utils.R ("is.holiday"): Fixed bug for zero length holiday
+	vector.
+	Thanks to Gabor Grothendieck <ggrothendieck@gmail.com>.
+
+	* man/days.Rd:
+	Document how to use the chron/default methods for Date objects.
+
+2007-12-21  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.3-16.
+
+	* NAMESPACE:
+	* R/chron.R:
+	* R/chron.Rd:
+	Added as.chron.Date().
+	Thanks to Gabor Grothendieck <ggrothendieck@gmail.com>.
+
+2007-07-12  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.3-14.
+	(License): Clarify.
+
+2007-07-10  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.3-13.
+
+	* R/times.R (print.times): Keep handling of "times greater than
+	one day" in sync with format.times().
+
+2007-06-18  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.3-12.
+
+	* R/dates.R:
+	* NAMESPACE:
+	Remove explicit trunc.dates() and floor.dates() so that in
+	particular the former can dispatch to trunc.times().
+	Rewrite dates() based on the former floor.dates().
+
+2007-05-03  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.3-11.
+
+	* man/trunc.times.Rd:
+	* R/dates.R (trunc.dates):
+	* R/times.R (trunc.times):
+	Add '...' argument to trunc() methods.
+
+2007-02-01  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.3-10.
+
+	* inst/CITATION: Get date/year and version from the package
+	metadata.
+
+2006-10-16  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.3-9.
+
+	* R/chron.R:
+	* man/chron.Rd:
+	Add as.chron.factor().
+	Thanks to Gabor Grothendieck <ggrothendieck@gmail.com>.
+
+2006-09-23  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.3-8.
+
+	* R/utils.R (hours, minutes, seconds): Sync code with what is used
+	in format.times() and more appropriate.  Thanks to Glen A Sargeant
+	<glen_sargeant@usgs.gov> and Gabor Grothendieck
+	<ggrothendieck@gmail.com> for raising the issue.
+
+2006-09-09  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.3-7.
+	(Imports): Add stats.
+
+	* NAMESPACE: More missing imports.
+
+2006-08-12  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.3-6.
+
+	* NAMESPACE: Add missing imports.
+
+2006-07-14  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.3-5.
+
+	* src/unpaste.c (unpaste):
+	* R/utils.R (unpaste):
+	Improvements for strict type checking in ff calls, thanks BDR.
+
+2006-06-23  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.3-4.
+
+	* inst/CITATION: New file.
+
+	* R/dates.R (seq.dates): Do not get rid of all-zero time
+	components.  Spotted by Sebastian Luque <sluque@mun.ca>.
+
+2006-06-09  Duncan Murdoch <murdoch@stats.uwo.ca>
+
+	* DESCRIPTION (Version): New version is 2.3-3.
+
+	* R/times.R:  Change axis.times to try harder to give unique
+	labels at round number locations.
+
+2006-02-04  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.3-2.
+
+	* R/times.R (trunc.times):
+	* man/trunc.times.Rd:
+	Add a comparison tolerance argument to address problems with
+	floating point representations, donated by Gabor Grothendieck
+	<ggrothendieck@gmail.com>.
+
+2006-01-13  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.3-1.
+
+	* R/times.R (trunc.times):
+	* man/trunc.times.Rd:
+	New trunc() methods for times objects, donated by Gabor
+	Grothendieck <ggrothendieck@gmail.com>.
+
+2005-10-25  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.3-0.
+
+	* R/times.R ("Axis.times"): New Axis() method for R 2.3.0 or
+	better, suggested by G Grothendieck <ggrothendieck@gmail.com>.
+	("plot.times"): Use 'col.axis' rather than 'col' etc for catching
+	graphical parameters in ... that affect (and are passed to)
+	axis().  Spotted by  Parlamis Franklin <fparlamis@mac.com> and
+	relayed by Marc Schwartz <MSchwartz@mn.rr.com>.
+
+2005-10-24  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* NAMESPACE: Added.
+
+2005-07-11  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* man/cut.dates.Rd:
+	* man/seq.dates.Rd:
+	Rd format.
+
+2005-04-28  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.2-35.
+
+	* R/chron.R:
+	* R/dates.R:
+	* R/times.R:
+	* R/utils.R:
+	As spotted by David Harte <david@statsresearch.co.nz>, there is a
+	problem with dates before the origin:
+	  R> chron(dates.="12/31/1969", times.="18:00:00")
+          [1] (01/01/70 -06:00:00)
+	(Most likely not as intended.)  Fix by changing trunc() to floor()
+	when extracting dates and times parts.
+
+2005-02-26  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.2-34.
+
+	* R/dates.R (seq.dates): Two patches suggested by Steve Su
+	<s.su@qut.edu.au> and relayed by Martyn Plummer
+	<plummer@iarc.fr>.
+
+2004-11-06  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.2-33.
+
+	* R/dates.R (seq.dates): seq.dates(by = "months") was wrong for
+	end of month dates.  Spotted by Ciprian_Marin@ssga.com, fix by
+	Gabor Grothendieck <ggrothendieck@myway.com>.  See also message
+	2004-November/058829.html in the r-help mail archive at
+	https://www.stat.math.ethz.ch/pipermail/r-help/.
+
+2004-09-15  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.2-32.
+
+	* R/dates.R (seq.dates): seq.dates() gave too many months/years if
+	a given length was too large.  Trim back to the specified length
+	(spotted by <Scott.Waichler@pnl.gov>, fix suggested by Gabor
+	Grothendieck <ggrothendieck@myway.com>).
+
+2004-05-28  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.2-31.
+
+	* R/utils.R ("is.holiday", "is.weekend"): If the argument does not
+	inherit from dates, try coercing to chron.  The is.numeric() test
+	does not do the right thing for POSIXct objects (e.g., obtained by
+	Sys.time(), spotted by Matthew Dowle <mdowle@concordiafunds.com>).
+
+	* man/is.holiday.Rd: Document the above change.
+
+	* R/dates.R ("Ops.dates"): At least avoid duplicated class
+	entries.
+
+2004-05-19  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.2-30.
+
+	* R/times.R (convert.times): Fix problem with times with 59 <
+	seconds < 60 (PR#6878 by Dennis Wolf <wolfda@ornl.gov>).
+
+2004-01-31  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.2-29.
+
+	* INDEX: Removed.
+
+2003-11-06  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.2-28.
+
+	* man/chron.Rd:
+	* man/day.of.week.Rd:
+	Fix codoc default value mismatch problems.
+
+2003-07-16  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.2-27.
+	(Depends): Need R 1.6.0 or better, as src/init.c uses
+	R_NativePrimitiveArgType.
+
+2003-06-28  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.2-26.
+
+	* man/chron.Rd: Explicitly say that for day/month/year format
+	specifications, the separator must be non-null.  Thanks to Jerome
+	Asselin <jerome@hivnet.ubc.ca> for the suggestion and the PRs for
+	the previous release.
+
+2003-06-25  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.2-25.
+
+	* R/utils.R (parse.format): Be more defensive about 'arbitrary'
+	separators in format specs.
+
+2003-04-23  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version) New version is 2.2-24.
+	(Author, Maintainer): Update KH email address.
+
+2003-01-16  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.2-23.
+
+	* R/utils.R (parse.format): Allow for arbitrary (non-alpha)
+	separators in format specs (PR#2458).
+
+2002-12-15  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.2-22.
+
+	* TITLE: Removed.
+
+	* R/utils.R:
+	* src/unpaste.c:
+	Move unpaste C code from .C() to .Call() (courtesy DTL).
+
+2002-05-02  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.2-21.
+	(Depends): Need R 1.2.0 or better.
+
+	* src/unpaste.c (unpaste): Remove pre-1.2.0 compatibility code.
+
+2002-03-31  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.2-20.
+
+	* R/utils.R (unpaste):
+	* R/dates.R (convert.dates):
+	* R/times.R (c.times):
+	Adjust for R 1.5.0 character NAs.
+
+2001-11-27  Kurt Hornik  <Kurt.Hornik@ci.tuwien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.2-19.
+
+	* R/chron.R:
+	* R/dates.R:
+	* R/times.R:
+	.Alias() is gone in R 1.4.0, hence remove.
+
+2001-09-18  Kurt Hornik  <Kurt.Hornik@ci.tuwien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.2-18.
+
+	* R/chron.R (chron): the default for the argument 'out.format' was
+	wrong if the argument 'format' was a function or R symbol (in
+	these cases 'out.format' now is not set and we stop).  As the
+	current code does not always preserve format slots, we need to
+	make a NULL format correspond to the default.
+	* R/dates.R (convert.dates): now correctly handles formats given
+	as R symbols.
+	* R/times.R (convert.times): now correctly handles formats given
+	as R symbols.
+	* R/utils.R (month.day.year): now coerces its argument to be
+	integer since the algorithm requires integer arithmetic.
+	All fixes by David James.
+
+2001-08-20  Kurt Hornik  <Kurt.Hornik@ci.tuwien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.2-17.
+
+	* R/chron.R:
+	* R/dates.R:
+	* R/times.R:
+	* R/utils.R:
+	* man/cut.dates.Rd:
+	* man/day.of.week.Rd:
+	* man/days.Rd:
+	* man/seq.dates.Rd:
+	Fix generic/method inconsistencies.
+
+2001-08-19  Kurt Hornik  <Kurt.Hornik@ci.tuwien.ac.at>
+
+	* man/day.of.week.Rd: Document arguments of day.of.week().
+
+	* man/chron-internal.Rd: Add keyword 'internal'.
+
+2001-07-14  Kurt Hornik  <Kurt.Hornik@ci.tuwien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.2-16.
+
+	* man/cut.dates.Rd: Fix unbalanced braces.
+
+2001-06-20  Kurt Hornik  <Kurt.Hornik@ci.tuwien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.2-15.
+
+	* R/times.R: In plot.times(), force eval of xlab/ylab before
+	subscripting x/y (PR#930).
+
+2001-06-15  Kurt Hornik  <Kurt.Hornik@ci.tuwien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.2-14.
+
+	* R/y2k.R: In year.expand(), do not try to expand NAs (problem
+	reported by B.Rowlingson@lancaster.ac.uk.
+
+2001-06-02  Kurt Hornik  <Kurt.Hornik@ci.tuwien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.2-13.
+
+	* man/chron.Rd:
+	* man/day.of.week.Rd:
+	Codoc fixes.
+
+2001-05-12  Kurt Hornik  <Kurt.Hornik@ci.tuwien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.2-12.
+
+	* man/chron-internal.Rd: New file.
+
+2001-05-10  Kurt Hornik  <Kurt.Hornik@ci.tuwien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.2-11.
+
+	* R/zzz.R:
+	* R/utils.R:
+	* man/day.of.week.Rd:
+	* man/days.Rd:
+	julian(), weekdays(), months() and quarters() are generic in R
+	1.3.0.  Functions in chron are now default methods for these.
+
+	* R/times.R: format.times() needs to round its calculation of
+	sec (suggested by BDR).
+
+	* R/chron.R: as.chron() is now generic, with a method for class
+	"POSIXt" and a default one.
+
+2001-04-06  Kurt Hornik  <Kurt.Hornik@ci.tuwien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.2-10.
+
+	* R/dates.R: Eliminate Y2K problems in cut.dates() pointed out by
+	"Dirk F. Raetzel" <raetzel@mathematik.uni-marburg.de>.
+
+2001-03-24  Kurt Hornik  <Kurt.Hornik@ci.tuwien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.2-9.
+
+	* R/utils.R: Add 'PACKAGE' arg to FF calls.
+
+2000-12-24  Kurt Hornik  <Kurt.Hornik@ci.tuwien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.2-8.
+	(Maintainer): New entry.
+
+Wed Aug  9 10:53:36 2000  Kurt Hornik  <Kurt.Hornik@ci.tuwien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.2-7.
+
+	* src/unpaste.c (unpaste): Adjust for R 1.2.0 GenGC changes.
+
+Sat Jul 22 11:41:45 2000  Kurt Hornik  <Kurt.Hornik@ci.tuwien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.2-6.
+
+	* R/chron.R (print.chron): Return argument 'x'.
+	* R/dates.R (print.dates): Return argument 'x'.
+	* R/times.R (print.times): Return argument 'x'.
+	Changes suggested by M Maechler <maechler@stat.math.ethz.ch>.
+
+Sun Jul 16 21:54:53 2000  Kurt Hornik  <Kurt.Hornik@ci.tuwien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.2-5.
+
+	* R/times.R: Use graphics parameter 'tcl' instead of 'tck'.
+
+Sun Jul  2 10:47:12 2000  Kurt Hornik  <Kurt.Hornik@ci.tuwien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.2-4.
+ 	(License): Under GPL now.
+
+	* src/chron_strs.c: Use R.h API (use Sint where appropriate).
+
+	* src/unpaste.c: Use R.h API.
+
+	* man/*.Rd: Provide \description{} entries.  Use \code where
+	language elements are referred.
+
+Wed Jun 28 16:14:43 2000  Kurt Hornik  <Kurt.Hornik@ci.tuwien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.2-3.
+
+	* R/chron.R: Get options via getOption().
+ 	Replace T/F by TRUE/FALSE.
+	Split into 4 files.
+
+Sun Jun 25 17:06:07 2000  Kurt Hornik  <Kurt.Hornik@ci.tuwien.ac.at>
+
+	* src/chron_strs.c (to_lower): Remove.
+
+	* R/chron.R: Comment lower.case().
+	Add as.data.frame() methods for classes 'chron', 'dates' and
+	'times'.
+
+	* R/y2k.R: Get options via getOption().
+  	Replace lower.case() by	tolower().
+	(year.expand): Only expand the 2-digit specifications, leaving
+	everything else intact.
+
+	* man/*.Rd: Add '\keyword{chron}'.
+
+	* man/chron.Rd: Add aliases for methods for objects of class
+	'chron'.
+
+	* man/dates.Rd: Add aliases for methods for objects of class
+	'dates' or 'times'.
+
+Sun Jan 23 15:35:51 2000  Kurt Hornik  <Kurt.Hornik@ci.tuwien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.2-2.
+
+	* Rename 'year.abb' and 'year.expand' to 'chron.year.abb' and
+	'chron.year.expand', respectively.
+
+Tue Jan  4 21:42:01 2000  Kurt Hornik  <Kurt.Hornik@ci.tuwien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.2-1.
+
+	* Y2K: New file.
+
+	* PORTING: Document Y2K improvements.
+
+	* R/zzz.R: Set new options 'year.abb' and 'year.expand' to allos
+	2-digit abbreviations and (kind of) guess the actual year.
+	* R/y2k.R: New file with replacements for the commented funs and
+	new functions year.expand() and year.strict().
+	* R/chron.R: Comment convert.dates(), format.dates(), and
+	parse.format().
+
+Thu Jul 29 10:48:16 1999  Kurt Hornik  <Kurt.Hornik@ci.tuwien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.1-7.
+	* TODO: unpaste() now uses C version.
+	* R/chron_strs.R: Remove.
+	* src/Makefile: Remove.
+	* src/unpaste.c: Rewrite for R style list handling.
+	* PORTING: Document the change from R to C unpaste.
+
+Sat Apr 10 13:08:59 1999  Kurt Hornik  <Kurt.Hornik@ci.tuwien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.1-6.
+	* R/chron.R (leap.year): Fix typo.
+	(format<-, format<-.times, origin<-): Replace 'val' by 'value'.
+	* PORTING: Document this.
+
+Sun Mar 28 10:53:43 1999  Kurt Hornik  <Kurt.Hornik@ci.tuwien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.1-5.
+
+	* R/chron.R (c.dates): Add 'recursive = FALSE' argument.
+	* R/chron.R (c.times): Add 'recursive = FALSE' argument.
+	* PORTING: Document this.
+
+Sun Dec  6 11:43:51 1998  Kurt Hornik  <Kurt.Hornik@ci.tuwien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.1-4.
+
+	* TODO: New file.
+
+Fri Nov 27 23:23:30 1998  Kurt Hornik  <Kurt.Hornik@ci.tuwien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.1-3.
+
+	* R/chron.R: Comment load.if.needed().
+	* man/load.if.needed.Rd: Removed.
+
+	* src/chron_strs.c: Add '#include <ctype.h>'.
+
+	* src-c: Removed.
+
+Fri Mar 13 08:02:50 1998  Kurt Hornik  <Kurt.Hornik@ci.tuwien.ac.at>
+
+	* DESCRIPTION (Version): New version is 2.1-2.
+
+	* README: Changed to new (?) URL for chron.
+
+Wed Feb 18 23:43:24 1998  Kurt Hornik  <Kurt.Hornik@ci.tuwien.ac.at>
+
+	* R/zzz.R: Use .First.lib() for dynloading.
+
+	* DESCRIPTION: New file.
+
+	* ChangeLog: Finally started, current version is 2.1-1.
