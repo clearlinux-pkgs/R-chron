@@ -4,9 +4,9 @@
 #
 Name     : R-chron
 Version  : 2.3
-Release  : 17
-URL      : http://cran.r-project.org/src/contrib/chron_2.3-46.tar.gz
-Source0  : http://cran.r-project.org/src/contrib/chron_2.3-46.tar.gz
+Release  : 18
+URL      : http://cran.r-project.org/src/contrib/chron_2.3-50.tar.gz
+Source0  : http://cran.r-project.org/src/contrib/chron_2.3-50.tar.gz
 Summary  : Chronological Objects which can Handle Dates and Times
 Group    : Development/Tools
 License  : GPL-2.0
@@ -34,11 +34,11 @@ lib components for the R-chron package.
 
 %build
 export LANG=C
-export SOURCE_DATE_EPOCH=1484531832
+export SOURCE_DATE_EPOCH=1487767272
 
 %install
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1484531832
+export SOURCE_DATE_EPOCH=1487767272
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
