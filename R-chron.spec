@@ -4,15 +4,13 @@
 #
 Name     : R-chron
 Version  : 2.3.53
-Release  : 50
+Release  : 51
 URL      : https://cran.r-project.org/src/contrib/chron_2.3-53.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/chron_2.3-53.tar.gz
-Summary  : Chronological Objects which can Handle Dates and Times
+Summary  : Chronological objects which can handle dates and times.
 Group    : Development/Tools
 License  : GPL-2.0
-Requires: R-chron-lib
-Requires: R-ggplot2
-Requires: R-zoo
+Requires: R-chron-lib = %{version}-%{release}
 BuildRequires : R-ggplot2
 BuildRequires : R-zoo
 BuildRequires : buildreq-R
@@ -37,11 +35,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1536534481
+export SOURCE_DATE_EPOCH=1552726994
 
 %install
+export SOURCE_DATE_EPOCH=1552726994
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1536534481
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -76,8 +74,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library chron|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  chron || :
 
 
 %files
@@ -102,10 +99,7 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/chron/help/paths.rds
 /usr/lib64/R/library/chron/html/00Index.html
 /usr/lib64/R/library/chron/html/R.css
-/usr/lib64/R/library/chron/libs/symbols.rds
 
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/R/library/chron/libs/chron.so
-/usr/lib64/R/library/chron/libs/chron.so.avx2
-/usr/lib64/R/library/chron/libs/chron.so.avx512
