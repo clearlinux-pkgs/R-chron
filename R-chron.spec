@@ -4,7 +4,7 @@
 #
 Name     : R-chron
 Version  : 2.3.53
-Release  : 51
+Release  : 52
 URL      : https://cran.r-project.org/src/contrib/chron_2.3-53.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/chron_2.3-53.tar.gz
 Summary  : Chronological objects which can handle dates and times.
