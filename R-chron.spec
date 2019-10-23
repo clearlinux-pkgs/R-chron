@@ -4,18 +4,17 @@
 #
 Name     : R-chron
 Version  : 2.3.54
-Release  : 58
+Release  : 59
 URL      : https://cran.r-project.org/src/contrib/chron_2.3-54.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/chron_2.3-54.tar.gz
-Summary  : Chronological Objects which can Handle Dates and Times
+Summary  : Chronological objects which can handle dates and times.
 Group    : Development/Tools
 License  : GPL-2.0
 Requires: R-chron-lib = %{version}-%{release}
-Requires: R-ggplot2
-Requires: R-zoo
 BuildRequires : R-ggplot2
 BuildRequires : R-zoo
 BuildRequires : buildreq-R
+BuildRequires : util-linux
 
 %description
 This directory contains code and help for an R port of CHRON, an S-PLUS
@@ -37,10 +36,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1566839213
+export SOURCE_DATE_EPOCH=1571809817
 
 %install
-export SOURCE_DATE_EPOCH=1566839213
+export SOURCE_DATE_EPOCH=1571809817
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
