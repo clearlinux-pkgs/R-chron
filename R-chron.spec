@@ -4,16 +4,14 @@
 #
 Name     : R-chron
 Version  : 2.3.55
-Release  : 63
+Release  : 64
 URL      : https://cran.r-project.org/src/contrib/chron_2.3-55.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/chron_2.3-55.tar.gz
 Summary  : Chronological Objects which can Handle Dates and Times
 Group    : Development/Tools
 License  : GPL-2.0
 Requires: R-chron-lib = %{version}-%{release}
-Requires: R-ggplot2
 Requires: R-zoo
-BuildRequires : R-ggplot2
 BuildRequires : R-zoo
 BuildRequires : buildreq-R
 
@@ -31,21 +29,22 @@ lib components for the R-chron package.
 
 %prep
 %setup -q -c -n chron
+cd %{_builddir}/chron
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1580749527
+export SOURCE_DATE_EPOCH=1589759795
 
 %install
-export SOURCE_DATE_EPOCH=1580749527
+export SOURCE_DATE_EPOCH=1589759795
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
