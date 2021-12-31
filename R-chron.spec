@@ -4,7 +4,7 @@
 #
 Name     : R-chron
 Version  : 2.3.56
-Release  : 78
+Release  : 79
 URL      : https://cran.r-project.org/src/contrib/chron_2.3-56.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/chron_2.3-56.tar.gz
 Summary  : Chronological Objects which can Handle Dates and Times
@@ -35,10 +35,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1640907010
+export SOURCE_DATE_EPOCH=1640988382
 
 %install
-export SOURCE_DATE_EPOCH=1640907010
+export SOURCE_DATE_EPOCH=1640988382
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
